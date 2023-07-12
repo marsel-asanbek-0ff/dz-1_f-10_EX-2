@@ -1,10 +1,18 @@
-for (num = 1; num <= 100; num ++) {
-    if (num % 3 == 0)
-           console.log('Fizz');
-    else if ((num % 3 != 0) && (num % 5 == 0))
-           console.log('Buzz');
-        else if ((num % 3 == 0) && (num % 5 == 0))
-           console.log('FizzBuzz');
-    else
-       console.log(num);
-}
+function power(base, exponent) {
+    var result = 1;
+    for (var i = 0; i < exponent; i++) {
+      result *= base;
+    }
+    return result;
+  }
+  
+
+  var base = parseFloat(prompt("Введите число:"));
+  var exponent = parseInt(prompt("Введите степень:"));
+  
+  if (isNaN(base) || isNaN(exponent)) {
+    alert("Ошибка ввода. Пожалуйста, введите числа.");
+  } else {
+    var result = power(base, exponent);
+    alert("Результат: " + result);
+  }
